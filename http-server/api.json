@@ -1,0 +1,19 @@
+{
+  "Demo": [
+    {
+      "url":"/kg/list",
+      "desc": "保留登录信息",
+      "mock":true,
+      "res": {
+        "success":true,
+        "message": "保留登录信息",
+        "data|5": [
+          {
+            "name": "hhhh",
+            "num": 45
+          }
+        ]
+      }
+    }
+  ]
+}
