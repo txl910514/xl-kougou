@@ -11,7 +11,7 @@
       docEl.style.fontSize = '16px'
     } else {
       // console.log('clientHeight',clientHeight);
-      docEl.style.fontSize = 100 * (clientWidth / 1457) + 'px'
+      docEl.style.fontSize = 100 * (clientWidth / 375) + 'px'
     }
   }
   if (!doc.addEventListener) return

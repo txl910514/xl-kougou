@@ -21,6 +21,6 @@
 <style lang="scss" rel="stylesheet/scss">
 #logo_container {
     background: #2ca2f9;
-    height: 52px;
+    height: 0.52rem;
 }
 </style>
