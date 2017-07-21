@@ -2,7 +2,8 @@ import mutations from './mutations.js'
 import actions from './actions.js'
 
 const state = {
-  kgList: []
+  kgList: [],
+  hosList: {}
 }
 
 export default ({

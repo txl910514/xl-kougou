@@ -1,18 +1,22 @@
 {
   "Demo": [
     {
-      "url":"/kg/list",
-      "desc": "保留登录信息",
+      "url":"/kg/host_list",
+      "desc": "最近热门",
       "mock":true,
       "res": {
         "success":true,
-        "message": "保留登录信息",
-        "data|5": [
-          {
-            "name": "hhhh",
-            "num": 45
-          }
-        ]
+        "message": "最近热门",
+        "data":{
+          "page": 1,
+          "totalPage": 10,
+          "list|150": [
+            {
+              "name": "@ctitle(5,9)",
+              "id": "@integer(0, 47)"
+            }
+          ]
+        }
       }
     }
   ]

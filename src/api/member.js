@@ -10,10 +10,20 @@ export default {
         return res
       })
   },
-  // 收集登录信息
-  retainLogin (param) {
+  // 最近热门
+  getHostList (params) {
+    let param = {
+      params
+    }
     return Vue.http('base')
-      .post('/login/insert', param)
+      .get('/kg/host_list', param)
+      .then((res) => {
+        return res
+      })
+  },
+  getHostListP (param) {
+    return Vue.http('base')
+      .post('/kg/host_list', param)
       .then((res) => {
         return res
       })

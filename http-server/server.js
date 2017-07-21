@@ -46,7 +46,7 @@ getApis();
 //支持callback
 /*app.set('jsonp callback name', 'callback');*/
 app.use(function(req, res) {
-  // console.log(req.query)
+  console.log(req.query)
   var data = undefined;
   var delay = 0;
   for(var group in api) {
@@ -55,7 +55,15 @@ app.use(function(req, res) {
         return false;
       }
       var apiRes = reqData.res;
-      data = reqData.mock ? mock.mock(apiRes) : apiRes;
+      console.log(reqData.url);
+      if (reqData.url === '/kg/host_list') {
+        let mockData= mock.mock(apiRes)
+        mockData.data.list = mockData.data.list.slice((req.query.page - 1) * req.query.num, req.query.page * req.query.num)
+        mockData.data.page = parseInt(req.query.page)
+        data = reqData.mock ? mockData : apiRes;
+      } else {
+        data = reqData.mock ? mock.mock(apiRes) : apiRes;
+      }
       delay = reqData.delay || 0;
       return true;
     }) !== undefined) {

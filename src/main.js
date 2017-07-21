@@ -11,6 +11,7 @@ import store from './stores'
 Vue.use(MintUI)
 Vue.use(http)
 Vue.config.productionTip = false
+// window.flex()
 
 /* eslint-disable no-new */
 new Vue({

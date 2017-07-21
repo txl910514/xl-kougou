@@ -11,17 +11,14 @@
 
 <script>
   import kHeader from './components/header/head.vue'
-export default {
-  name: 'app',
-  components: {
-    kHeader
+  export default {
+    name: 'app',
+    components: {
+      kHeader
+    }
   }
-}
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
- body {
-   margin: 0;
-   padding: 0;
- }
+@import "assets/css/index";
 </style>

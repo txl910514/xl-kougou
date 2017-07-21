@@ -19,6 +19,21 @@ const actions = {
 
         })
     })
+  },
+  [types.HOS_LIST] ({ commit, state }, member) {
+    return new Promise((resolve, reject) => {
+      api.getHostList(member)
+        .then((res) => {
+          commit(types.HOS_LIST, res)
+          resolve(res)
+        })
+        .catch((res, v) => {
+          console.log('actions catch', res, v)
+        })
+        .then((res) => {
+
+        })
+    })
   }
 }
 
