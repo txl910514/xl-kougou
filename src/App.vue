@@ -20,5 +20,5 @@
 </script>
 
 <style lang="scss" rel="stylesheet/scss">
-@import "assets/css/index";
+@import "./assets/css/index";
 </style>

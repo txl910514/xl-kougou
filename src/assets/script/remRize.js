@@ -5,6 +5,7 @@
   const docEl = doc.documentElement
   const resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize'
   const recalc = function () {
+    console.log('uuuuuut')
     const clientWidth = docEl.clientWidth
     if (!clientWidth) return
     if (clientWidth <= 320) {
@@ -48,4 +49,3 @@
 //   metaEl.setAttribute('content', `width=device-width,user-scalable=no,initial-scale=${scale},maximum-scale=${scale},minimum-scale=${scale}`)
 //   doc.documentElement.style.fontSize = `${_baseFontSize / 2 * dpr * _fontscale}px`
 // }
-

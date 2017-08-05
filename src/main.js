@@ -8,6 +8,7 @@ import App from './App'
 import http from '@/utils/http'
 import router from './router'
 import store from './stores'
+// import './assets/css/sprite/sprite.scss'
 Vue.use(MintUI)
 Vue.use(http)
 Vue.config.productionTip = false
