@@ -1,6 +1,9 @@
 <template>
-    <div id="index">
+    <div id="index" class="mtn">
         <div class="icon_set"></div>
+        <div @click="clickFunc()" class="dian">
+            点他
+        </div>
     </div>
 </template>
 
@@ -14,7 +17,13 @@
     },
     mounted () {
     },
-    methods: {},
+    methods: {
+      clickFunc () {
+        require.ensure([], () => {
+          require(`../assets/css/main.scss`)
+        })
+      }
+    },
     components: {
     }
   }
@@ -24,5 +33,8 @@
     @import "../assets/css/sprite/sprite";
     .icon_set {
         @include sprite($icon-set);
+    }
+    .dian {
+        margin-top: 60px;
     }
 </style>
